@@ -25,7 +25,7 @@ async function buscarChamados() {
                 const cliente = criarColunaTextual(chamado.cliente.nome, 'col-4');
                 var funcionario;
                 if (chamado.funcionario) {
-                    funcionario = criarColunaTextual(chamado.funcionario.nome, 'col-2');
+                    funcionario = criarColunaTextual(chamado.funcionario.nome, 'col-4');
                 } else {
                     funcionario = criarColunaTextual('', 'col-2'); 
                 }
