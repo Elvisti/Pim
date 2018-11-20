@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+<head>
+			<title> Chamado</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!-- Bootstrap -->
+			<link href="css/bootstrap.min.css" rel="stylesheet">
+			<link href="font/flaticon.css" rel="stylesheet">
+			<link href="css/contraste.css" rel="stylesheet">
+</head>
+		  
+<body>
+		  
+				<div class="navbar navbar-inverse navbar-static-top">
+					<div class="container">
+						<a href="home.html" class="navbar-brand"><i class="flaticon-cms"></i> REPAIRTEC</a>
+							<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+					<div class="collapse navbar-collapse navHeaderCollapse">
+								<ul class="nav navbar-nav navbar-right">
+								<br>
+								<br>
+								<li><a href="home.html"><i class="flaticon-home"></i>Home</a></li>
+								<li><a href="abrir_chamado.html"><i class="flaticon-support"></i>Abrir Chamado</a></li>
+								<li><a href="consultar.html"><i class="flaticon-list"></i>Consultar</a></li>
+								<li class="dropdwon">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon-pencil"></i>Cadastrar<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="cadastrar_cliente.html"><i class="flaticon-customers"></i>Cliente</a></li>
+										<li><a href="cadastrar_funcionario.html"><i class="flaticon-man"></i>Funcionário</a></li>
+									</ul>
+									<li><a href="#" id="altocontraste"  onclick="window.toggleContrast()" onkeydown="window.toggleContrast()"><i class="flaticon-contrast"></i>Alto contraste </a></li>
+								<li><a href="#">Acessibilidade</a></li>
+								<li><a id="sair" href="login.html">Sair</a></li>
+								</li>
+								</ul>
+							</div>
+						</div>
+				</div>
+			<div class="container">
+					<h1 class="text-center"> Chamado</h1>
+					<h4 id="saudacao"></h4>
+					<div class="col-md-1"></div>
+				
+			<div class="col-md-10">
+				<form> 
+						<div class="row">
+							<div class="col-md-6">
+								<label label-default="" for="txtCpf">CPF</label>
+								<input type="text" class="form-control" id="txtCpf" name="cpf"  placeholder="CPF..." required>
+							</div>
+							
+							<div class="col-md-6">
+								<label label-default="" for="txtTecnico">Técnico</label>
+								<select class="form-control" name="tecnico" id="select_tecnico" >
+								</select>		
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-md-12">
+								<label label-default="" for="txtAssunto">Assunto</label>
+								<input type="text" class="form-control" id="txtAssunto" name="assunto"  placeholder="Assunto..." required>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="col-md-12">
+								<label label-default="" for="txtDescricao">Descrição</label>
+								<textarea id="txtDescricao" class="form-control" name="descricao"  rows="4" placeholder="Descrição..." required></textarea>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+								<div class="col-md-3"></div>
+								<div class="col-md-8 col-lg-3">
+									<button class="btn btn-danger btn-block btn-md" type="reset" id="btnCancelar">Cancelar</button>
+								</div>
+								<div class="col-md-8 col-lg-3">
+										<button class="btn btn-success btn-block btn-md" type="button" id="btnEncerrar">Encerrar</button>
+								</div>
+								<div class="col-md-8 col-lg-3">
+									<button class="btn btn-primary btn-block btn-md" type="button" id="btnTransferir">Transferir</button>
+								</div>
+						</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+		
+		<footer class="footer">
+		<div class="container">
+			<hr>
+			<p>Copyright &copy; 2018| REPAIRTEC.</p>
+		  </footer>
+		  </div>
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/abrir_chamado.js"></script>
+		<script src="js/contraste.js"></script>
+		<script src="js/sair.js"></script>
+</body> 
+</html>

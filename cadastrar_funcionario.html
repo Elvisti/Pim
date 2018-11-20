@@ -1,0 +1,110 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+        <title>Cadastrar Cliente</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font/flaticon.css" rel="stylesheet">
+        <link href="css/contraste.css" rel="stylesheet">
+</head>
+      
+<body>
+      
+            <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <a href="home.html" class="navbar-brand"><i class="flaticon-cms"></i> REPAIRTEC</a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <br>
+                        <br>
+                        <li><a href="home.html"><i class="flaticon-home"></i>Home</a></li>
+                        <li><a href="abrir_chamado.html"><i class="flaticon-support"></i>Abrir Chamado</a></li>
+                        <li><a href="consultar.html"><i class="flaticon-list"></i>Consultar</a></li>
+                        <li class="dropdwon">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon-pencil"></i>Cadastrar<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cadastrar_cliente.html"><i class="flaticon-customers"></i>Cliente</a></li>
+                            <li><a href="cadastrar_funcionario.html"><i class="flaticon-man"></i>Funcionário</a></li>
+                        </ul>
+                        <li><a href="#" id="altocontraste"  onclick="window.toggleContrast()" onkeydown="window.toggleContrast()"><i class="flaticon-contrast"></i>Alto contraste </a></li>
+                        <li><a href="#">Acessibilidade</a></li>
+                        <li><a id="sair" href="login.html">Sair</a></li>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="container">
+            <h1 class="text-center">Cadastrar Funcionário</h1>
+            <div class="col-md-1"></div>
+        
+            <div class="col-md-10">
+            <form> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <label label-default="" for="txtNome">Nome</label>
+                        <input type="text" class="form-control" id="txtNome" name="nome" requeired placeholder="Nome..." required>
+                    </div>
+                    <div class="col-md-3">
+                        <label label-default="" for="txtCargo">Cargo</label>
+                        <select class="form-control" name="cargo" id="select_cargo">
+                                <option value="">Selecione o Cargo</option>
+                                <option value="1">Atendente</option>
+                                <option value="2">Técnico</option>   
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label label-default="" for="txtCpf">CPF</label>
+                        <input type="text" class="form-control" id="txtCpf" name="cpf"requeired placeholder="CPF..."required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label label-default="" for="txtSenha">Senha</label>
+                        <input type="password" class="form-control" id="txtSenha" name="senha" requeired placeholder="Senha..." required>
+                    </div>
+                    <div class="col-md-6">
+                        <label label-default="" for="txtConfirmarSenha">Confirmar Senha</label>
+                        <input type="password" class="form-control" id="txtConfirmarSenha" name="confirmarSenha"requeired placeholder="Confirmar Senha..."required>
+                    </div>
+                </div>
+               
+                <br>
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-8 col-lg-3">
+                            <button class="btn btn-danger btn-block btn-md" type="reset" id="btnCancelar">Cancelar</button>
+                        </div>
+                    <div class="col-md-8 col-lg-3">
+                         <button class="btn btn-success btn-block btn-md" type="button" id="btnCadastar">Cadastar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+        <div class="col-md-1"></div>
+        
+        <footer class="footer">
+            <div class="container">
+              <hr>
+              <p>Copyright &copy; 2018| REPAIRTEC.</p>
+            </footer>
+            </div>
+        
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/contraste.js"></script>
+            <script src="js/cadastrar_funcionario.js"></script>
+            <script src="js/sair.js"></script>
+</body>
+      
+</html>
