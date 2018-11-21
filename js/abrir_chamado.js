@@ -2,6 +2,7 @@
 const btnEncerrar = document.getElementById('btnEncerrar');
 const btnTransferir = document.getElementById('btnTransferir');
 const txtCpf = document.getElementById('txtCpf');
+const txtNome = document.getElementById('txtNome');
 const txtAssunto = document.getElementById('txtAssunto');
 const txtDescricao = document.getElementById('txtDescricao');
 const saudacao = document.getElementById('saudacao');
@@ -16,16 +17,22 @@ async function inicializar() {
     saudacao.innerHTML =  `Usuario: ${usuarioLogado.nome} (${tipoUsuario})`;
 
     var chamado = await buscarChamado();
-
+	
+	if(ehAtendente != 1) {
+            btnTransferir.style.display = 'none';
+			alert('Somente atendente abre chamado!');
+    }
+	
     const ehEdicao = chamado != null;
     if (ehEdicao) {
         txtCpf.value = chamado.cliente.cpf;
+        txtNome.value = chamado.nome;
         txtAssunto.value = chamado.titulo;
         txtDescricao.value = chamado.descricao;
-
-        if(ehAtendente != 1) {
-            btnTransferir.style.display = 'none';
-        }
+		
+        btnTransferir.style.display = 'none';
+		
+		txtCpf.disable = true;
     }
 
     btnTransferir.addEventListener('click', () => {
@@ -36,6 +43,7 @@ async function inicializar() {
         chamado.funcionario = {
             id: select_tecnico.value
         };
+        chamado.nome = txtNome.value;
         chamado.titulo = txtAssunto.value;
         chamado.descricao = txtDescricao.value;
  
@@ -44,8 +52,8 @@ async function inicializar() {
     })
 
 	btnEncerrar.addEventListener('click', () => {
+		
         chamado.descricao = txtDescricao.value;
-        
 
         salvarChamado(chamado);
     })
