@@ -43,7 +43,6 @@ async function inicializar() {
         chamado.funcionario = {
             id: select_tecnico.value
         };
-        chamado.nome = txtNome.value;
         chamado.titulo = txtAssunto.value;
         chamado.descricao = txtDescricao.value;
  

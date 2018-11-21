@@ -45,7 +45,7 @@ async function buscarChamados() {
                 const editar = document.createElement('div');
                 editar.classList.add('col-md-2');
                 const linkEditar = document.createElement('a');
-                linkEditar.innerHTML = 'EDITAR';
+                linkEditar.innerHTML = 'EDITAR/VISUALIZAR';
                 linkEditar.href = `abrir_chamado.html?id=${chamado.id}`
                 editar.appendChild(linkEditar);
 
