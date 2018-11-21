@@ -20,16 +20,17 @@ async function entrar(cpf, senha) {
         });
         if (response.ok) {
             const usuarioLogado = await response.json();
-           
+            
+            
 
             // Armazena Token e Usuario logado localmente
             localStorage.setItem("token", basicToken);
             localStorage.setItem("usuario", JSON.stringify(usuarioLogado))
             
-            if(usuarioLogado.funcionario) {
-                location.href = "home.html";
-            } else {
+            if(usuarioLogado.cargo != 1) {
                 location.href = "consultar.html";
+            } else {
+                location.href = "home.html";
             }
         } else {
             const error = await response.json();
