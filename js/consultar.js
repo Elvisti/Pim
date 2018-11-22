@@ -3,6 +3,7 @@ const saudacao = document.getElementById('saudacao');
 const usuarioLogado = JSON.parse(localStorage.getItem("usuario"));
 const btnAbrirChamado = document.getElementById('btnAbrirChamado');
 
+inicializar();
 
 function inicializar() {
     const ehAtendente = usuarioLogado.cargo == 1;
@@ -25,16 +26,19 @@ async function buscarChamados() {
         if (response.ok) {
             const chamados = await response.json();
 
+            var corpo_tabela = document.querySelector("tbody");
+
             for(i = 0; i < chamados.length; i++) {
 				const chamado = chamados[i];
 
                 const linha = document.createElement('div');
                 linha.classList.add('container');
                
+               
 
                 const titulo = criarColunaTextual(chamado.titulo, 'col-md-2');
                 const cliente = criarColunaTextual(chamado.cliente.nome, 'col-md-2');
-                var funcionario;
+              
                 if (chamado.funcionario) {
                     funcionario = criarColunaTextual(chamado.funcionario.nome, 'col-md-2');
                 } else {
@@ -75,3 +79,5 @@ async function buscarChamados() {
         return coluna;
     }
 }
+
+   
