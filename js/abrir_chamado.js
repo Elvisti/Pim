@@ -2,7 +2,6 @@
 const btnEncerrar = document.getElementById('btnEncerrar');
 const btnTransferir = document.getElementById('btnTransferir');
 const txtCpf = document.getElementById('txtCpf');
-const txtNome = document.getElementById('txtNome');
 const txtAssunto = document.getElementById('txtAssunto');
 const txtDescricao = document.getElementById('txtDescricao');
 const saudacao = document.getElementById('saudacao');
@@ -26,13 +25,12 @@ async function inicializar() {
     const ehEdicao = chamado != null;
     if (ehEdicao) {
         txtCpf.value = chamado.cliente.cpf;
-        txtNome.value = chamado.nome;
         txtAssunto.value = chamado.titulo;
         txtDescricao.value = chamado.descricao;
 		
-        btnTransferir.style.display = 'none';
+       
 		
-		txtCpf.disable = true;
+		
     }
 
     btnTransferir.addEventListener('click', () => {
