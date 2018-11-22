@@ -12,7 +12,7 @@ inicializar();
 
 async function inicializar() {
     const ehAtendente = usuarioLogado.cargo == 1;
-    const tipoUsuario = ehAtendente ? 'a' : 't';
+    const tipoUsuario = ehAtendente ? 'Atendente' : 'Técnico';
     saudacao.innerHTML =  `Usuario: ${usuarioLogado.nome} (${tipoUsuario})`;
 
     var chamado = await buscarChamado();
@@ -28,9 +28,7 @@ async function inicializar() {
         txtAssunto.value = chamado.titulo;
         txtDescricao.value = chamado.descricao;
 		
-       
-		
-		
+       txtCpf.disable = true;	
     }
 
     btnTransferir.addEventListener('click', () => {
@@ -43,6 +41,7 @@ async function inicializar() {
         };
         chamado.titulo = txtAssunto.value;
         chamado.descricao = txtDescricao.value;
+        
  
 
         salvarChamado(chamado);

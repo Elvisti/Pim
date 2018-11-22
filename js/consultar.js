@@ -6,7 +6,7 @@ const btnAbrirChamado = document.getElementById('btnAbrirChamado');
 
 function inicializar() {
     const ehAtendente = usuarioLogado.cargo == 1;
-    const tipoUsuario = ehAtendente ? 'a' : 't';
+    const tipoUsuario = ehAtendente ? 'Atendente' : 'Técnico';
     saudacao.innerHTML =  `Usuario: ${usuarioLogado.nome} (${tipoUsuario})`;
 }
 
@@ -30,6 +30,7 @@ async function buscarChamados() {
 
                 const linha = document.createElement('div');
                 linha.classList.add('container');
+               
 
                 const titulo = criarColunaTextual(chamado.titulo, 'col-md-2');
                 const cliente = criarColunaTextual(chamado.cliente.nome, 'col-md-2');
@@ -55,8 +56,8 @@ async function buscarChamados() {
                 linha.appendChild(status);
                 linha.appendChild(inicio);
                 linha.appendChild(editar);
-
                 body.appendChild(linha);
+              
             }
 			
         } else {
