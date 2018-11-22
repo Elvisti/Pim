@@ -19,7 +19,7 @@ async function inicializar() {
 	
 	if(ehAtendente != 1) {
             btnTransferir.style.display = 'none';
-			alert('Somente atendente abre chamado!');
+			
     }
 	
     const ehEdicao = chamado != null;
